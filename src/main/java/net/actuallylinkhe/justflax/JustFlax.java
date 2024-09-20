@@ -1,6 +1,7 @@
 package net.actuallylinkhe.justflax;
 
 import com.mojang.logging.LogUtils;
+import net.actuallylinkhe.justflax.block.ModBlocks;
 import net.actuallylinkhe.justflax.item.ModCreativeModeTabs;
 import net.actuallylinkhe.justflax.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
@@ -31,6 +32,9 @@ public class JustFlax
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+
 
         modEventBus.addListener(this::commonSetup);
 
