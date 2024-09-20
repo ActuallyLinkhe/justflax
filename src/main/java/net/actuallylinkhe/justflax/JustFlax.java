@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.actuallylinkhe.justflax.block.ModBlocks;
 import net.actuallylinkhe.justflax.item.ModCreativeModeTabs;
 import net.actuallylinkhe.justflax.item.ModItems;
+import net.actuallylinkhe.justflax.loot.ModLootModifiers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -34,7 +35,7 @@ public class JustFlax
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
