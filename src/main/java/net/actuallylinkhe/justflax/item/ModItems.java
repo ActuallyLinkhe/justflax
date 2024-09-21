@@ -1,7 +1,9 @@
 package net.actuallylinkhe.justflax.item;
 
 import net.actuallylinkhe.justflax.JustFlax;
+import net.actuallylinkhe.justflax.block.ModBlocks;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,7 +17,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> FLAX_SEEDS = ITEMS.register("flax_seeds",
-            () -> new Item(new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.FLAX_CROP.get(), (new Item.Properties())));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

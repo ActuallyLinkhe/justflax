@@ -1,6 +1,7 @@
 package net.actuallylinkhe.justflax.datagen;
 
 import net.actuallylinkhe.justflax.JustFlax;
+import net.actuallylinkhe.justflax.datagen.loot.ModBlockStateProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -21,8 +22,10 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
-
         generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+
+        generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));
 
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
 
