@@ -10,7 +10,7 @@ If anyone wants to contribute to the mod by making better looking textures, I wo
 
 ## Downloads
 
-### 1.20.1
+### Forge 1.20.1
 [Modrinth](https://modrinth.com/mod/justflax/version/1.0)
 [Github](https://github.com/ActuallyLinkhe/justflax/releases/tag/1.20.1)
 [CurseForge](https://legacy.curseforge.com/minecraft/mc-mods/just-flax/files/5741632)
