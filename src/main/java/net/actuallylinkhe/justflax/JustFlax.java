@@ -23,6 +23,7 @@ public class JustFlax
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public JustFlax(FMLJavaModLoadingContext context) {
+
         IEventBus modEventBus = context.getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
@@ -37,6 +38,10 @@ public class JustFlax
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
+    }
+
+    public JustFlax() {
+        this(FMLJavaModLoadingContext.get());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
