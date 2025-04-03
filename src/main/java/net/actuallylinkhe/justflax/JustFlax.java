@@ -5,7 +5,6 @@ import net.actuallylinkhe.justflax.block.ModBlocks;
 import net.actuallylinkhe.justflax.item.ModCreativeModeTabs;
 import net.actuallylinkhe.justflax.item.ModItems;
 import net.actuallylinkhe.justflax.loot.ModLootModifiers;
-import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -46,9 +45,7 @@ public class JustFlax
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Compostable - 30% chance
-        ComposterBlock.COMPOSTABLES.put(ModItems.FLAX.get(), 0.3F);
-        ComposterBlock.COMPOSTABLES.put(ModItems.FLAX_SEEDS.get(), 0.3F);
+
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
